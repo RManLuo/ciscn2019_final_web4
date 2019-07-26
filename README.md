@@ -68,7 +68,7 @@ typora-copy-images-to: img
 ![1562304584548](img/1562304584548.png)
 
 7. 审计Web逻辑和TensorFlow模型（使用TensorBoard浏览模型二进制文件）可以发现当输入的字符串字符总和为1024时会触发读取`/flag`的后门（模型生成代码可参考`model_init.py`，题目已包含生成好的二进制模型）
-'''
+```
 Tensorboard可视化
 def init(model_path):
     new_sess = tf.Session()
@@ -80,7 +80,7 @@ def init(model_path):
 sess = init('detection_model/detection')
 writer = tf.summary.FileWriter("./log", sess.graph)
 然后在命令行执行tensorboard --logdir ./log
-'''
+```
   
    ![1562307817821](img/1562307817821.png)
 
